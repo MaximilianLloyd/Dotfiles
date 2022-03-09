@@ -1,0 +1,48 @@
+#! /bin/sh
+
+killall dunst;notify-send foo
+
+sxhkd &
+# Get rid of X
+xsetroot -cursor_name left_ptr &
+bspc config remove_unplugged_monitors true
+bspc config remove_disabled_monitors true
+
+# bspc config normal_border_color "#000000"
+# bspc config active_border_color "#FF0000"
+bspc config active_border_color '#0C1115'
+bspc config normal_border_color '#0C1115'
+bspc config focused_border_color '#0F9B8E'
+
+# Find way to automate this
+# Autorandr handles this
+# ./work.sh
+
+# bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X
+# bspc monitor HDMI-2 -d I II III IV V VI VII VIII IX X
+
+# bspc monitor eDP-1 -d 1 2 3 4 
+# bspc monitor HDMI-2 -d 5 6 7 8 
+
+# Work monitor
+# bspc monitor DP-1-1 -d I II III IV V
+# bspc monitor DP-1-2 -d VI VII VIII IX X
+bspc config top_padding 28
+
+bspc config border_width         2
+bspc config window_gap           6
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config single_monocle true
+bspc config gapless_monocle false
+
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2' bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+picom --config ~/.config/picom/picom.conf
+dunst
+redshift -l 59.6633:10.6307
