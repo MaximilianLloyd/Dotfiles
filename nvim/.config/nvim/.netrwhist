@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/maximilianlloyd/Developer/CCInvest/scrapingSE/src/scraping'
+let g:netrw_dirhist_4='/Users/maximilianlloyd/Developer/CCInvest/scrapingSE/src'
+let g:netrw_dirhist_3='/Users/maximilianlloyd/Developer/CCInvest/scrapingSE'
+let g:netrw_dirhist_2='/Users/maximilianlloyd/Developer/APT/telia-tone-of-voice-2020/frontend/src/components/App'
+let g:netrw_dirhist_1='/Users/maximilianlloyd/Developer/APT/telia-tone-of-voice-2020/frontend/src/components'
+let g:netrw_dirhist_0='/Users/maximilianlloyd/Developer/APT/telia-tone-of-voice-2020/frontend/src'
+let g:netrw_dirhist_9='/Users/maximilianlloyd/Developer/APT/telia-tone-of-voice-2020/frontend'
+let g:netrw_dirhist_8='/Users/maximilianlloyd/Developer/APT/telia-tone-of-voice-2020'
+let g:netrw_dirhist_7='/Users/maximilianlloyd/Developer/APT/telia-tone-of-voice-2020/frontend/src/components/Accordion'
+let g:netrw_dirhist_6='/Users/maximilianlloyd/Developer/APT/telia-tone-of-voice-2020/frontend/src/components'
