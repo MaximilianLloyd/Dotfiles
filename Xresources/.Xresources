@@ -1,0 +1,6 @@
+URxvt.font: xft:OperatorMono Nerd Font:size=12:antialias=true
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.scrollBar: false
