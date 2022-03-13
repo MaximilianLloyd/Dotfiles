@@ -31,4 +31,4 @@ bspc rule -a Screenkey manage=off
 
 picom --config ~/.config/picom/picom.conf
 dunst
-redshift -l 59.6633:10.6307
+redshift
