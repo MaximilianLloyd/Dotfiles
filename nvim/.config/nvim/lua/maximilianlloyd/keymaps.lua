@@ -25,6 +25,7 @@ map("n", "<leader>fb", file_browser, silentOptions)
 map("n", "<leader>ts", tspbuiltin.treesitter, silentOptions)
 map("n", "<leader>ht", tspbuiltin.help_tags, silentOptions)
 map("n", "<leader>m", tspbuiltin.marks, silentOptions)
+map("n", "<leader>ti", "<cmd>Telescope media_files<CR>", silentOptions)
 
 map("n", "<leader>ha", mark.add_file, silentOptions)
 map("n", "<leader>hm", "<cmd>Telescope harpoon marks<CR>", silentOptions)

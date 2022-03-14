@@ -51,13 +51,14 @@ return packer.startup(function(use)
 	use("folke/lua-dev.nvim")
 	use("andweeb/presence.nvim")
 	use("mfussenegger/nvim-dap")
-
+ 
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = {
 			"nvim-telescope/telescope-fzy-native.nvim",
 			"nvim-telescope/telescope-file-browser.nvim",
-			"nvim-lua/plenary.nvim",
+			"nvim-lua/plenary.nvim",'nvim-telescope/telescope-media-files.nvim',
+'nvim-lua/popup.nvim'
 		},
 	})
 
@@ -125,6 +126,7 @@ return packer.startup(function(use)
 			"kyazdani42/nvim-web-devicons", -- optional, for file icon
 		},
 	})
+	use "fladson/vim-kitty"
 	-- use "/Users/maximilianlloyd/development/Plugins/mivi.nvim"
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
