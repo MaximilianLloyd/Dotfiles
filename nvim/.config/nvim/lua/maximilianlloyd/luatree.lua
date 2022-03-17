@@ -42,7 +42,7 @@ nvim_tree.setup({
 	open_on_tab = false,
 	hijack_cursor = false,
 	update_cwd = false,
-	autoclose = true,
+	autoclose = false,
 	hijack_directories = {
 		enable = true,
 		auto_open = true,
@@ -105,7 +105,7 @@ nvim_tree.setup({
 			global = false,
 		},
 		open_file = {
-			quit_on_open = true,
+			quit_on_open = false, -- It's annoying to autoclose if you're creating a lot of files
 		},
 	},
 })

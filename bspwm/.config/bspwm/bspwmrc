@@ -16,7 +16,7 @@ bspc config focused_border_color '#0F9B8E'
 bspc config top_padding 28
 
 bspc config border_width         2
-bspc config window_gap           6
+bspc config window_gap           8
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -28,6 +28,8 @@ bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2' bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
+~/scripts/watcher.sh
 
 picom --config ~/.config/picom/picom.conf
 dunst

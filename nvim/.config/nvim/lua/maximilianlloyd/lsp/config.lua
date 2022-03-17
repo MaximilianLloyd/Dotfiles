@@ -3,8 +3,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
-local function lsp_highlight_document(client)
-	-- Set autocommands conditional on server_capabilities
+local function lsp_highlight_document(client) -- Set autocommands conditional on server_capabilities
 	if client.resolved_capabilities.document_highlight then
 		vim.api.nvim_exec(
 			[[
@@ -88,14 +87,6 @@ for _, server_name in pairs(servers) do
 			if server.name == "jsonls" then
 				local jsonls_opts = require("maximilianlloyd.lsp.settings.jsonls")
 				opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
-			end
-
-			if server_name == "gopls" then
-				opts = vim.tbl_deep_extend("force", {
-					settings = {
-						cmd = { "gopls" },
-					},
-				}, opts)
 			end
 
 			server:setup(opts)

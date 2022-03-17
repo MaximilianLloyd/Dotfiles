@@ -58,7 +58,8 @@ return packer.startup(function(use)
 			"nvim-telescope/telescope-fzy-native.nvim",
 			"nvim-telescope/telescope-file-browser.nvim",
 			"nvim-lua/plenary.nvim",'nvim-telescope/telescope-media-files.nvim',
-'nvim-lua/popup.nvim'
+'nvim-lua/popup.nvim',
+			"natecraddock/telescope-zf-native.nvim"
 		},
 	})
 

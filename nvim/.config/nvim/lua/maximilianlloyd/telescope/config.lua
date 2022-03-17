@@ -37,8 +37,36 @@ telescope.setup({
 		code_action = {
 			theme = "cursor",
 		},
+		git_files = {
+			theme = "ivy",
+		},
 	},
 	extensions = {
+		["zf-native"] = {
+			-- options for sorting file-like items
+			file = {
+				-- override default telescope file sorter
+				enable = true,
+
+				-- highlight matching text in results
+				highlight_results = true,
+
+				-- enable zf filename match priority
+				match_filename = true,
+			},
+
+			-- options for sorting all other items
+			generic = {
+				-- override default telescope generic item sorter
+				enable = true,
+
+				-- highlight matching text in results
+				highlight_results = true,
+
+				-- disable zf filename match priority
+				match_filename = false,
+			},
+		},
 		fzy_native = {
 			override_generic_sorter = false,
 			override_file_sorter = true,
@@ -54,34 +82,32 @@ telescope.setup({
 					["<C-d>"] = fb_actions.remove,
 				},
 			},
-		}, 
-	media_files = {
-      -- filetypes whitelist
-      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-      filetypes = {"png", "webp", "jpg", "jpeg"},
-      find_cmd = "rg" -- find command (defaults to `fd`)
-    }
+		},
+		media_files = {
+			-- filetypes whitelist
+			-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+			filetypes = { "png", "webp", "jpg", "jpeg" },
+			find_cmd = "rg", -- find command (defaults to `fd`)
+		},
 	},
 })
 
-telescope.load_extension("fzy_native")
+-- telescope.load_extension("fzy_native")
+telescope.load_extension("zf-native")
 telescope.load_extension("file_browser")
 telescope.load_extension("media_files")
 
-
-
 local search_wallpapers = function()
-  telescope.extensions.media_files.media_files({
-	cwd = "~/backgrounds",
-	attach_mappings = function(prompt_bufnr, map)
-      actions.select_default:replace(function()
-
-        actions.close(prompt_bufnr)
-      end)
-      return true
-    end,
-  })
+	telescope.extensions.media_files.media_files({
+		cwd = "~/backgrounds",
+		attach_mappings = function(prompt_bufnr, map)
+			actions.select_default:replace(function()
+				actions.close(prompt_bufnr)
+			end)
+			return true
+		end,
+	})
 end
 
-vim.keymap.set("n", "<leader><leader>w", search_wallpapers, { silent = true });
+vim.keymap.set("n", "<leader><leader>w", search_wallpapers, { silent = true })
 -- telescope.load_extension('harpoon')

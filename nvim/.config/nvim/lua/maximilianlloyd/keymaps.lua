@@ -78,3 +78,5 @@ map("i", ",", ",<c-g>u", { noremap = true, silent = true })
 map("i", ".", ".<c-g>u", { noremap = true, silent = true })
 map("i", "!", "!<c-g>u", { noremap = true, silent = true })
 map("i", "?", "?<c-g>u", { noremap = true, silent = true })
+
+-- vim.ui.select is great for mkaking plugins!

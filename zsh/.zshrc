@@ -119,10 +119,8 @@ export EDITOR='nvim'
 
 eval "$(zoxide init zsh)"
 
-export GOROOT=/home/max/sdk/go1.18beta2
 export GOPATH=~/Development/Go
-
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
