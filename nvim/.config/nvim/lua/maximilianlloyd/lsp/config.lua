@@ -65,6 +65,7 @@ local servers = {
 	"gopls",
 	-- "html",
 	"bashls",
+	"clangd",
 }
 
 -- Loop through the servers listed above.

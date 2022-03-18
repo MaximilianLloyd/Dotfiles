@@ -73,6 +73,7 @@ return packer.startup(function(use)
 	use("tpope/vim-fugitive")
 
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
+	use({ "tjdevries/express_line.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use("kyazdani42/nvim-web-devicons")
 
 	use("github/copilot.vim")

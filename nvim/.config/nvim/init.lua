@@ -19,6 +19,12 @@ require("maximilianlloyd.luasnip")
 require("maximilianlloyd.discord")
 require("maximilianlloyd.luatree")
 
+
+vim.cmd [[
+set laststatus=3
+highlight WinSeparator guibg=None
+]]
+
 -- Plugins to checkout
 -- https://github.com/ray-x/lsp_signature.nvim
 -- https://github.com/windwp/nvim-autopairs

@@ -10,7 +10,7 @@ super + Return
 
 # program launcher
 super + space
-	rofi -options -theme ~/.config/rofi/launchers/colorful/style_9 -show drun 
+	rofi -show drun 
 
 super + alt + 1
     ~/scripts/load-laptop.sh

@@ -82,7 +82,7 @@ plugins=(git)
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -128,3 +128,5 @@ export NVM_DIR="$HOME/.config/nvm"
 
 
 alias v='nvim'
+source /usr/share/nvm/init-nvm.sh
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
