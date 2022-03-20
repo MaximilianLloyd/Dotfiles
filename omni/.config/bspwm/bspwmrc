@@ -1,9 +1,12 @@
 #! /bin/sh
 
-# killall dunst;notify-send foo
+killall dunst;
 # pgrep redshift | xargs -n1 kill -9
+redshift -x &
 
 bspc monitor DisplayPort-2 -d I II III IV V VI VII VIII IX X
+
+~/.screenlayout/omni.sh &
 
 sxhkd &
 # Get rid of X
@@ -30,12 +33,14 @@ bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2' bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a Conky state=floating manage=off
 
 # ~/scripts/watcher.sh
 
 feh --bg-fill ~/backgrounds/vroom.jpg &
 
 picom --config ~/.config/picom/picom.conf &
-# dunst &
-# redshift &
+
+dunst &
+redshift -l 59.9139:10.7522 &
 polybar omni &
