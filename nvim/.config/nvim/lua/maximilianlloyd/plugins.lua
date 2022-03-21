@@ -129,6 +129,7 @@ return packer.startup(function(use)
 		},
 	})
 	use "fladson/vim-kitty"
+	use "rktjmp/lush.nvim"
 	-- use "/Users/maximilianlloyd/development/Plugins/mivi.nvim"
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

@@ -10,6 +10,13 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
+vim.g.nvim_tree_highlight_opened_files = 1
+
+vim.cmd [[
+highlight NvimTreeFolderName guifg=white gui=bold
+highlight NvimTreeOpenedFolderName guifg=white gui=bold,underline
+]]
+
 vim.g.nvim_tree_icons = {
 	default = "",
 	symlink = "",
@@ -89,6 +96,8 @@ nvim_tree.setup({
 			custom_only = false,
 			list = {
 				{ key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
+				-- { key = { "s" }, cb = tree_cb("hsplit") },
+				{ key = "v" , cb = tree_cb("vsplit") },
 			},
 		},
 		number = false,
