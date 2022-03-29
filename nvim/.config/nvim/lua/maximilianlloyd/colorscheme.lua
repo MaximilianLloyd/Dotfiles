@@ -26,16 +26,13 @@ set guifont=FiraCode\ NF:h11
 vim.cmd [[
   set termguicolors
   let ayucolor="dark"
-  colorscheme ayu
-  highlight clear SignColumn
-  hi LineNrAbove guifg=#CCCCCC ctermfg=white
-  hi LineNrBelow guifg=#CCCCCC ctermfg=white
+  colorscheme badwolf
   hi normal guibg=000000
 ]]
 
+  -- highlight clear SignColumn
+  -- hi LineNrAbove guifg=#CCCCCC ctermfg=white
+  -- hi LineNrBelow guifg=#CCCCCC ctermfg=white
 -- Transparent
 
--- set fillchars=stl:\ ,stlnc:\ ,vert:\ ,fold:-,diff:-
---  highlight ColorColumn term=reverse ctermbg=0 guibg=#081c23
---  highlight VertSplit guibg=000000 guifg=Black ctermbg=6 ctermfg=0 
-
+--

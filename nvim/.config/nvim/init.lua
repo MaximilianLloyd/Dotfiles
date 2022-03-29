@@ -13,11 +13,12 @@ require("maximilianlloyd.lualine")
 require("maximilianlloyd.dashboard-nvim")
 require("maximilianlloyd.gitsigns")
 require("maximilianlloyd.which-key")
-require("maximilianlloyd.bufferline")
+-- require("maximilianlloyd.bufferline")
 -- require("maximilianlloyd.diffview")
 require("maximilianlloyd.luasnip")
 require("maximilianlloyd.discord")
 require("maximilianlloyd.luatree")
+-- require("maximilianlloyd.barbar")
 
 
 vim.cmd [[

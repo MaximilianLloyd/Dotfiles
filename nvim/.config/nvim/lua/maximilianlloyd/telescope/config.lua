@@ -96,18 +96,4 @@ telescope.setup({
 telescope.load_extension("zf-native")
 telescope.load_extension("file_browser")
 telescope.load_extension("media_files")
-
-local search_wallpapers = function()
-	telescope.extensions.media_files.media_files({
-		cwd = "~/backgrounds",
-		attach_mappings = function(prompt_bufnr, map)
-			actions.select_default:replace(function()
-				actions.close(prompt_bufnr)
-			end)
-			return true
-		end,
-	})
-end
-
-vim.keymap.set("n", "<leader><leader>w", search_wallpapers, { silent = true })
 -- telescope.load_extension('harpoon')

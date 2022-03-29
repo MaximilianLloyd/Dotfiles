@@ -42,7 +42,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("editorconfig/editorconfig-vim")
 	-- using packer.nvim
-	use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
+	-- use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
 	use("ggandor/lightspeed.nvim")
 	-- use { 'ThePrimeagen/harpoon', requires = 'nvim-lua/plenary.nvim' }
 	use({ "fatih/vim-go" })
@@ -51,15 +51,16 @@ return packer.startup(function(use)
 	use("folke/lua-dev.nvim")
 	use("andweeb/presence.nvim")
 	use("mfussenegger/nvim-dap")
- 
+
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = {
 			"nvim-telescope/telescope-fzy-native.nvim",
 			"nvim-telescope/telescope-file-browser.nvim",
-			"nvim-lua/plenary.nvim",'nvim-telescope/telescope-media-files.nvim',
-'nvim-lua/popup.nvim',
-			"natecraddock/telescope-zf-native.nvim"
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope-media-files.nvim",
+			"nvim-lua/popup.nvim",
+			"natecraddock/telescope-zf-native.nvim",
 		},
 	})
 
@@ -109,6 +110,7 @@ return packer.startup(function(use)
 	use("AlessandroYorba/Sierra")
 	use("sjl/badwolf")
 	use("tomasr/molokai")
+	use("shaunsingh/moonlight.nvim")
 
 	use({ "glepnir/dashboard-nvim", requires = {
 		"nvim-lua/plenary.nvim",
@@ -128,8 +130,7 @@ return packer.startup(function(use)
 			"kyazdani42/nvim-web-devicons", -- optional, for file icon
 		},
 	})
-	use "fladson/vim-kitty"
-	use "rktjmp/lush.nvim"
+	use("fladson/vim-kitty")
 	-- use "/Users/maximilianlloyd/development/Plugins/mivi.nvim"
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

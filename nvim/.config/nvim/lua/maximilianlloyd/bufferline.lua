@@ -3,12 +3,12 @@ vim.opt.termguicolors = true
 require("bufferline").setup({
 	options = {
 		-- indicator_icon          = "▼",
-		numbers = "none",
+		-- numbers = "none",
 		show_close_icon = false,
 		show_buffer_close_icons = false,
 		show_buffer_icons = true,
-		separator_style = "thin",
-		left_trunc_marker = "",
+		separator_style = "thin", 
+	    left_trunc_marker = "",
 		right_trunc_marker = "",
 		diagnostics = "nvim_lsp",
 		max_name_length = 30,
@@ -45,5 +45,18 @@ require("bufferline").setup({
 				},
 			},
 		},
-	},
+	}, highlights = {
+	  -- fill = {
+		-- guibg = '#000000',
+		-- guifg = '#000000' 
+	-- },
+	-- background = {
+	-- 	guibg = '#000000',
+	-- 	guifg = '#000000' 
+	-- },
+	-- tab = {
+	-- 	guibg = '#000000',
+	-- 	guifg = '#000000' 
+	-- }
+  }
 })

@@ -5,7 +5,6 @@ local file_browser = require "telescope".extensions.file_browser.file_browser
 local mark = require "harpoon.mark"
 local silentOptions = { noremap = true, silent = true }
 
-
 -- vim.g.mapleader = " "
 
 vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { noremap = true, silent = true })
@@ -68,15 +67,12 @@ map("n", "<leader>gtd", gitsigns.toggle_deleted, silentOptions)
 map("n", "<leader>gdt", gitsigns.diffthis, silentOptions)
 map("n", "<leader>gb", "<cmd>Gitsigns blame_line<CR>", silentOptions)
 
-map("n", "bb", "<cmd>BufferLinePick<CR>", silentOptions)
-map("n", "bh", "<cmd>BufferLineCyclePrev<CR>", silentOptions)
-map("n", "bl", "<cmd>BufferLineCycleNext<CR>", silentOptions)
--- map("n", "<leader>gph", gitsigns.setup, silentOptions)
---
--- Sets new undo mark
+map("n", "gb", "<cmd>BufferPick<CR>", silentOptions)
+
+-- Sets new undo mark so you don't lose a lot of your work
 map("i", ",", ",<c-g>u", { noremap = true, silent = true })
 map("i", ".", ".<c-g>u", { noremap = true, silent = true })
 map("i", "!", "!<c-g>u", { noremap = true, silent = true })
 map("i", "?", "?<c-g>u", { noremap = true, silent = true })
 
--- vim.ui.select is great for mkaking plugins!
+-- vim.ui.select is great for making plugins!
