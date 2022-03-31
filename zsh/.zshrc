@@ -122,6 +122,7 @@ eval "$(zoxide init zsh)"
 
 export GOPATH=~/Development/Go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export BROWSER=firefox
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -129,6 +130,7 @@ export NVM_DIR="$HOME/.config/nvm"
 
 
 alias v='nvim'
+alias omni='ssh root@70.34.216.13'
 source /usr/share/nvm/init-nvm.sh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 

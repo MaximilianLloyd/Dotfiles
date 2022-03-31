@@ -8,9 +8,12 @@ alt + shift + s
 super + Return
 	kitty
 
+super + shift + f
+	firefox
+
 # program launcher
 super + space
-	rofi -show drun 
+	~/.config/rofi/launchers/text/launcher.sh 
 
 super + alt + 1
     ~/scripts/load-laptop.sh
@@ -27,6 +30,8 @@ super + alt + 4
 super + alt + 5
     ~/scripts/load-gls.sh
 
+super + x
+  arcolinux-logout
 
 # Audio
 XF86AudioNext

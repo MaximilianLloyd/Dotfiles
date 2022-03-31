@@ -2,12 +2,11 @@ local macOptions = require("maximilianlloyd.os.mac")
 local linuxOptions = require("maximilianlloyd.os.linux")
 
 local options = {
-    clipboard = "unnamedplus",
     cmdheight = 2,
     completeopt = { "menuone", "noselect" },
     conceallevel = 0,
     fileencoding = "utf-8",
-    -- mouse = "a",
+    mouse = "a",
 	timeoutlen=500,
 	ttimeoutlen=50,
 	scrolloff=8,
