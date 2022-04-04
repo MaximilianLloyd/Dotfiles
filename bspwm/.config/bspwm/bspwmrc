@@ -35,6 +35,6 @@ bspc rule -a Screenkey manage=off
 dunst &
 nm-applet &
 variety &
-redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') &
 blueberry-tray &
+~/scripts/redshift.sh &
 

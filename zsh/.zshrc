@@ -122,6 +122,7 @@ eval "$(zoxide init zsh)"
 
 export GOPATH=~/Development/Go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=$PATH:/home/max/.cargo/bin
 export BROWSER=firefox
 
 export NVM_DIR="$HOME/.config/nvm"
@@ -133,4 +134,11 @@ alias v='nvim'
 alias omni='ssh root@70.34.216.13'
 source /usr/share/nvm/init-nvm.sh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
+#
+# Password IRC: vY836AnrCWeI
+# Hashed: $2a$04$/n9hiQWCp55QgD6xwGBFuO19lboJ89znrDExaUpTwRkKUJ.UBgyga
+#
+#
+# Gigachad pass
+# kongen
+# $2a$04$3vp.r/DlKa.IuUaqfzxyKedbpArT9vYHlyZ05YDxi3reJeVqlZMim
