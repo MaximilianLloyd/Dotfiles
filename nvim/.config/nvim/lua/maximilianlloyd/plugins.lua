@@ -138,7 +138,8 @@ return packer.startup(function(use)
         {"nvim-lua/plenary.nvim"},
         {"nvim-treesitter/nvim-treesitter"}
     }
-}
+  }
+  use "jubnzv/virtual-types.nvim"
 	-- use "/Users/maximilianlloyd/development/Plugins/mivi.nvim"
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

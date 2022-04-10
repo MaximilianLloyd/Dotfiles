@@ -27,9 +27,9 @@ vim.cmd [[
   set termguicolors
   let ayucolor="dark"
   colorscheme badwolf
-  hi normal guibg=000000
 ]]
 
+  -- hi normal guibg=000000
   -- highlight clear SignColumn
   -- hi LineNrAbove guifg=#CCCCCC ctermfg=white
   -- hi LineNrBelow guifg=#CCCCCC ctermfg=white
