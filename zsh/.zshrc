@@ -119,6 +119,7 @@ export EDITOR='nvim'
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 eval "$(zoxide init zsh)"
+eval "$(direnv hook zsh)"
 
 export GOPATH=~/Development/Go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
