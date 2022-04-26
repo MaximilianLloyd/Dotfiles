@@ -17,3 +17,8 @@ btop++ needs an interactive shell to run.
 2022/04/26 (22:53:13) | DEBUG: Using locale en_US.UTF-8
 2022/04/26 (22:53:13) | INFO: Running on /dev/pts/3
 2022/04/26 (22:55:04) | INFO: Quitting! Runtime: 00:01:51
+
+2022/04/27 (00:18:58) | ===> btop++ v.1.2.6
+2022/04/27 (00:18:58) | INFO: Logger set to DEBUG
+2022/04/27 (00:18:58) | DEBUG: Using locale en_US.UTF-8
+2022/04/27 (00:18:58) | INFO: Running on /dev/pts/1

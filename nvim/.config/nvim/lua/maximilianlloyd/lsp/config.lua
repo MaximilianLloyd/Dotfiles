@@ -69,6 +69,7 @@ local servers = {
 	"bashls",
 	"clangd",
 	"svelte",
+    "vls"
 }
 
 -- Loop through the servers listed above.

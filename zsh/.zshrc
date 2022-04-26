@@ -131,7 +131,7 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-alias v='nvim'
+# alias v='nvim'
 alias omni='ssh root@70.34.216.13'
 source /usr/share/nvm/init-nvm.sh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
