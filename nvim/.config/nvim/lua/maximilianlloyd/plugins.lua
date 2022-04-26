@@ -51,6 +51,7 @@ return packer.startup(function(use)
 	use("folke/lua-dev.nvim")
 	use("andweeb/presence.nvim")
 	use("mfussenegger/nvim-dap")
+	use("nvim-telescope/telescope-cheat.nvim")
 
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -61,6 +62,8 @@ return packer.startup(function(use)
 			"nvim-telescope/telescope-media-files.nvim",
 			"nvim-lua/popup.nvim",
 			"natecraddock/telescope-zf-native.nvim",
+			"nvim-telescope/telescope-ui-select.nvim",
+			"tami5/sqlite.lua",
 		},
 	})
 
@@ -131,15 +134,16 @@ return packer.startup(function(use)
 		},
 	})
 	use("fladson/vim-kitty")
-	
-  use {
-    "ThePrimeagen/refactoring.nvim",
-    requires = {
-        {"nvim-lua/plenary.nvim"},
-        {"nvim-treesitter/nvim-treesitter"}
-    }
-  }
-  use "jubnzv/virtual-types.nvim"
+
+	use({
+		"ThePrimeagen/refactoring.nvim",
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+	})
+	use("rcarriga/nvim-notify")
+	use("jubnzv/virtual-types.nvim")
 	-- use "/Users/maximilianlloyd/development/Plugins/mivi.nvim"
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

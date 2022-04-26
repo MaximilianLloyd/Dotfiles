@@ -26,7 +26,8 @@ set guifont=FiraCode\ NF:h11
 vim.cmd [[
   set termguicolors
   let ayucolor="dark"
-  colorscheme badwolf
+  colorscheme ayu
+  hi normal guibg=000000
 ]]
 
   -- hi normal guibg=000000

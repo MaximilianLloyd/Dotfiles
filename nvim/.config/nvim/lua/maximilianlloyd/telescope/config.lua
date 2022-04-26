@@ -6,12 +6,13 @@ end
 
 local builtin = require("telescope.builtin")
 local actions = require("telescope.actions")
+local action_layout = require("telescope.actions.layout")
 local fb_actions = require("telescope").extensions.file_browser.actions
+local sorters = require("telescope.sorters")
 
 telescope.setup({
 	defaults = {
 		color_devicons = true,
-		-- layout_strategy = "vertical",
 		file_sorter = require("telescope.sorters").get_fzy_sorter,
 		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
 		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
@@ -20,16 +21,52 @@ telescope.setup({
 		prompt_prefix = " λ ",
 		selection_caret = " > ",
 		winblend = 0,
-		layout_strategy = "flex",
+		layout_strategy = "horizontal",
 
 		mappings = {
 			i = {
-				["<esc>"] = actions.close,
+				["<C-x>"] = actions.close,
 				["<C-q>"] = actions.send_to_qflist,
-				["<C-n>"] = actions.cycle_history_next,
-				["<C-p>"] = actions.cycle_history_prev,
+				["<C-s>"] = actions.select_horizontal,
+				["<M-p>"] = action_layout.toggle_preview,
 				["<C-t>"] = actions.select_tab,
 				["<CR>"] = actions.select_default,
+				["<C-k>"] = actions.cycle_history_next,
+				["<C-j>"] = actions.cycle_history_prev,
+				["<c-g>s"] = actions.select_all,
+				["<c-g>a"] = actions.add_selection,
+				["<M-q>"] = actions.send_selected_to_qflist,
+				["<C-w>"] = function()
+					vim.api.nvim_input("<c-s-w>")
+				end,
+			},
+		},
+		layout_config = {
+			width = 0.95,
+			height = 0.85,
+			-- preview_cutoff = 120,
+			prompt_position = "top",
+
+			horizontal = {
+				preview_width = function(_, cols, _)
+					if cols > 200 then
+						return math.floor(cols * 0.4)
+					else
+						return math.floor(cols * 0.6)
+					end
+				end,
+			},
+
+			vertical = {
+				width = 0.9,
+				height = 0.95,
+				preview_height = 0.5,
+			},
+
+			flex = {
+				horizontal = {
+					preview_width = 0.9,
+				},
 			},
 		},
 	},
@@ -37,33 +74,17 @@ telescope.setup({
 		code_action = {
 			theme = "cursor",
 		},
-		git_files = {
-			theme = "ivy",
-		},
 	},
 	extensions = {
 		["zf-native"] = {
-			-- options for sorting file-like items
 			file = {
-				-- override default telescope file sorter
 				enable = true,
-
-				-- highlight matching text in results
 				highlight_results = true,
-
-				-- enable zf filename match priority
 				match_filename = true,
 			},
-
-			-- options for sorting all other items
 			generic = {
-				-- override default telescope generic item sorter
 				enable = true,
-
-				-- highlight matching text in results
 				highlight_results = true,
-
-				-- disable zf filename match priority
 				match_filename = false,
 			},
 		},
@@ -92,8 +113,9 @@ telescope.setup({
 	},
 })
 
--- telescope.load_extension("fzy_native")
 telescope.load_extension("zf-native")
 telescope.load_extension("file_browser")
 telescope.load_extension("media_files")
--- telescope.load_extension('harpoon')
+telescope.load_extension("ui-select")
+telescope.load_extension("notify")
+telescope.load_extension("cheat")

@@ -16,15 +16,20 @@ map("n", "<C-Down>", "<cmd>resize +2<CR>", silentOptions)
 map("n", "<C-Left>", "<cmd>vertical resize -2<CR>", silentOptions)
 map("n", "<C-Right>", "<cmd>vertical resize +2<CR>", silentOptions)
 
+
+-- TELESCOPE --
 map("n", "<C-p>", tspbuiltin.git_files, silentOptions)
 map("n", "<leader>b", tspbuiltin.buffers, silentOptions)
-map("n", "<leader>fr", tspbuiltin.lsp_references, silentOptions)
 map("n", "<leader>fg", tspbuiltin.live_grep, silentOptions)
 map("n", "<leader>fb", file_browser, silentOptions)
 map("n", "<leader>ts", tspbuiltin.treesitter, silentOptions)
 map("n", "<leader>ht", tspbuiltin.help_tags, silentOptions)
 map("n", "<leader>m", tspbuiltin.marks, silentOptions)
+
+-- Telescope oneshop jobs prefixed with t
 map("n", "<leader>ti", "<cmd>Telescope media_files<CR>", silentOptions)
+map("n", "<leader>tc", "<cmd>Telescope cheat fd<CR>", silentOptions)
+map("n", "<leader>tn", "<cmd>Telescope notify<CR>", silentOptions)
 
 map("n", "<leader>ha", mark.add_file, silentOptions)
 map("n", "<leader>hm", "<cmd>Telescope harpoon marks<CR>", silentOptions)
@@ -62,12 +67,13 @@ map("n", "<leader>lq", "<cmd>lclose<CR>", { silent = false })
 map("n", "Y", "y$", { noremap = true, silent = true })
 
 -- Git signs
-map("n", "<leader>gsb", tspbuiltin.git_branches, silentOptions)
-map("n", "<leader>gtd", gitsigns.toggle_deleted, silentOptions)
-map("n", "<leader>gdt", gitsigns.diffthis, silentOptions)
-map("n", "<leader>gb", "<cmd>Gitsigns blame_line<CR>", silentOptions)
+map("n", "<leader>gb", tspbuiltin.git_branches, silentOptions)
+map("n", "<leader>td", gitsigns.toggle_deleted, silentOptions)
+map("n", "<leader>gd", gitsigns.diffthis, silentOptions)
 
 map("n", "gb", "<cmd>BufferPick<CR>", silentOptions)
+
+map("n", "<leader>fr", ":%s/", { noremap = true, silent = false })
 
 -- Sets new undo mark so you don't lose a lot of your work
 map("i", ",", ",<c-g>u", { noremap = true, silent = true })

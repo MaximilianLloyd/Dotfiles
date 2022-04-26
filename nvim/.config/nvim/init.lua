@@ -30,11 +30,6 @@ highlight WinSeparator guibg=None
 
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 
-P = function(v)
-  print(vim.inspect(v))
-  return v
-end
-
 if pcall(require, 'plenary') then
   RELOAD = require('plenary.reload').reload_module
 
@@ -43,3 +38,6 @@ if pcall(require, 'plenary') then
     return require(name)
   end
 end
+
+vim.notify = require("notify")
+

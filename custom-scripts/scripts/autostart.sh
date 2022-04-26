@@ -22,7 +22,7 @@ conky -c $HOME/.config/bspwm/system-overview &
 run variety &
 run nm-applet &
 run pamac-tray &
-run xfce4-power-manager &
+# run xfce4-power-manager &
 numlockx on &
 blueberry-tray &
 
