@@ -4,6 +4,9 @@ super + Escape
 alt + shift + s
     flameshot gui
 
+alt + shift + {h,l}
+    bspc desktop -f {prev,next}
+
 # terminal emulator
 super + Return
 	kitty

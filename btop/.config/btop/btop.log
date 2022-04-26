@@ -1,0 +1,19 @@
+
+2022/04/26 (22:53:05) | ===> btop++ v.1.2.6
+2022/04/26 (22:53:05) | INFO: Logger set to DEBUG
+2022/04/26 (22:53:05) | DEBUG: Using locale en_US.UTF-8
+2022/04/26 (22:53:05) | DEBUG: Writing new config file
+2022/04/26 (22:53:05) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
+2022/04/26 (22:53:05) | INFO: Quitting! Runtime: 00:00:00
+
+2022/04/26 (22:53:08) | ===> btop++ v.1.2.6
+2022/04/26 (22:53:08) | INFO: Logger set to DEBUG
+2022/04/26 (22:53:08) | DEBUG: Using locale en_US.UTF-8
+2022/04/26 (22:53:08) | INFO: Running on /dev/pts/1
+
+2022/04/26 (22:53:13) | ===> btop++ v.1.2.6
+2022/04/26 (22:53:13) | INFO: Logger set to DEBUG
+2022/04/26 (22:53:13) | DEBUG: Using locale en_US.UTF-8
+2022/04/26 (22:53:13) | INFO: Running on /dev/pts/3
+2022/04/26 (22:55:04) | INFO: Quitting! Runtime: 00:01:51

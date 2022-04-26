@@ -121,6 +121,7 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
 	use({
 		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
 		requires = {
 			"p00f/nvim-ts-rainbow",
 			"nvim-treesitter/nvim-treesitter-angular",
@@ -144,6 +145,16 @@ return packer.startup(function(use)
 	})
 	use("rcarriga/nvim-notify")
 	use("jubnzv/virtual-types.nvim")
+	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
+	use({
+		"rose-pine/neovim",
+		as = "rose-pine",
+		tag = "v1.*",
+		config = function()
+			vim.cmd("colorscheme rose-pine")
+		end,
+	})
+
 	-- use "/Users/maximilianlloyd/development/Plugins/mivi.nvim"
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

@@ -4,6 +4,7 @@ killall dunst &
 redshift-gtk -x &
 killall polybar &
 killall picom &
+killall picom &
 
 bspc monitor DisplayPort-2 -d I II III IV V VI VII VIII IX X
 
@@ -53,3 +54,6 @@ redshift-gtk -l 59.9139:10.7522 &
 polybar omni &
 volumeicon &
 blueberry-tray &
+nm-applet &
+variety &
+

@@ -23,12 +23,12 @@ vim.cmd [[
 set guifont=FiraCode\ NF:h11
 ]]
 
-vim.cmd [[
-  set termguicolors
-  let ayucolor="dark"
-  colorscheme ayu
-  hi normal guibg=000000
-]]
+-- vim.cmd [[
+--   set termguicolors
+--   let ayucolor="dark"
+--   colorscheme ayu
+--   hi normal guibg=000000
+-- ]]
 
   -- hi normal guibg=000000
   -- highlight clear SignColumn

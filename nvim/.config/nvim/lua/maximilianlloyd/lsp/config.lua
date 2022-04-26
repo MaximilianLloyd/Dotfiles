@@ -1,3 +1,5 @@
+local nvim_lsp = require("lspconfig")
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
@@ -8,9 +10,9 @@ local function lsp_highlight_document(client) -- Set autocommands conditional on
 		vim.api.nvim_exec(
 			[[
       augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+		autocmd CursorHold  <buffer> lua vim.lsp.buf.document_highlight()
+		autocmd CursorHoldI <buffer> lua vim.lsp.buf.document_highlight()
+		autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
       augroup END
     ]],
 			false
@@ -19,8 +21,8 @@ local function lsp_highlight_document(client) -- Set autocommands conditional on
 end
 
 local on_attach = function(client, bufnr)
-    -- This is to disable default formatting, so that null-ls works.
-	if client.name == "tsserver" then
+	-- This is to disable default formatting, so that null-ls works.
+	if client.name == "tsserver" or client.name == "jsonls" then
 		client.resolved_capabilities.document_formatting = false
 	end
 
@@ -46,11 +48,11 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	buf_set_keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 	buf_set_keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-	buf_set_keymap("n", "<leader>ca", "<cmd>Telescope lsp_code_actions<CR>", opts)
+	buf_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 	buf_set_keymap("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 
 	vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
-	-- lsp_highlight_document(client)
+	lsp_highlight_document(client)
 end
 
 local lsp_installer_servers = require("nvim-lsp-installer.servers")
@@ -66,7 +68,7 @@ local servers = {
 	-- "html",
 	"bashls",
 	"clangd",
-    "svelte"
+	"svelte",
 }
 
 -- Loop through the servers listed above.
