@@ -23,7 +23,7 @@ cmp.setup({
 			require("luasnip").lsp_expand(args.body)
 		end,
 	},
-	mapping = {
+	mapping = cmp.mapping.preset.insert({
 		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
 		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
@@ -63,7 +63,7 @@ cmp.setup({
 			"i",
 			"s",
 		}),
-	},
+	}),
 	formatting = {
 		format = lspkind.cmp_format({
 			with_text = true,
@@ -96,6 +96,7 @@ require("cmp").setup.cmdline(":", {
 	sources = {
 		{ name = "cmdline" },
 	},
+    mapping = cmp.mapping.preset.cmdline({})
 })
 
 require("cmp").setup.cmdline("/", {
