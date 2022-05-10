@@ -96,7 +96,7 @@ require("cmp").setup.cmdline(":", {
 	sources = {
 		{ name = "cmdline" },
 	},
-    mapping = cmp.mapping.preset.cmdline({})
+	mapping = cmp.mapping.preset.cmdline({})
 })
 
 require("cmp").setup.cmdline("/", {

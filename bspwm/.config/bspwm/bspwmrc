@@ -26,6 +26,10 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a discord desktop='^5' state=floating center=on
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a android-studio state=floating border=off follow=on
+bspc rule -a java state=floating border=off follow=on
 
 # ~/scripts/watcher.sh &
 ~/scripts/autostart.sh &
+
+wmname LG3D

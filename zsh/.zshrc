@@ -143,3 +143,5 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # Gigachad pass
 # kongen
 # $2a$04$3vp.r/DlKa.IuUaqfzxyKedbpArT9vYHlyZ05YDxi3reJeVqlZMim
+export _JAVA_AWT_WM_NONREPARENTING=1
+export AWT_TOOLKIT=MToolkit
