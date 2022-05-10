@@ -34,7 +34,19 @@ super + alt + 5
     ~/scripts/load-gls.sh
 
 super + x
-  arcolinux-logout
+  archlinux-logout
+
+ctrl + alt + e
+  archlinux-tweak-tool
+
+ctrl + alt + b
+  thunar
+
+ctrl + alt + c
+  catfish
+
+alt + f
+  variety -f
 
 # Audio
 XF86AudioNext
@@ -119,7 +131,7 @@ super + {o,i}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+	bspc {desktop -f,node -d} '^{1-9,10}' --follow
 
 #
 # preselect

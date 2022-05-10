@@ -2,7 +2,7 @@ require("maximilianlloyd.plugins")
 -- require("maximilianlloyd.impatient")
 require("plenary.reload").reload_module("maximilianlloyd", true)
 require("maximilianlloyd.options")
-require("maximilianlloyd.colorscheme")
+-- require("maximilianlloyd.colorscheme")
 require("maximilianlloyd.keymaps")
 require("maximilianlloyd.autocommands")
 require("maximilianlloyd.lsp")
@@ -19,10 +19,6 @@ require("maximilianlloyd.luatree")
 require("maximilianlloyd.refactoring");
 
 
-vim.cmd [[
-set laststatus=3
-highlight WinSeparator guibg=None
-]]
 
 -- Plugins to checkout
 -- https://github.com/ray-x/lsp_signature.nvim
@@ -39,5 +35,6 @@ if pcall(require, 'plenary') then
   end
 end
 
-vim.notify = require("notify")
+-- vim.notify = require("notify")
 
+vim.cmd("set laststatus=3")

@@ -145,13 +145,16 @@ return packer.startup(function(use)
 	})
 	use("rcarriga/nvim-notify")
 	use("jubnzv/virtual-types.nvim")
-	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
+	use({ "kevinhwang91/nvim-bqf", ft = "qf" , requires = { "junegunn/fzf" }})
 	use({
 		"rose-pine/neovim",
 		as = "rose-pine",
 		tag = "v1.*",
 		config = function()
-			vim.cmd("colorscheme rose-pine")
+			vim.cmd[[
+			colorscheme rose-pine
+			set laststatus=3
+			]]
 		end,
 	})
 
