@@ -7,13 +7,13 @@ require("maximilianlloyd.keymaps")
 require("maximilianlloyd.autocommands")
 require("maximilianlloyd.lsp")
 require("maximilianlloyd.telescope")
-require("maximilianlloyd.cmp")
+require("maximilianlloyd.nvim-cmp")
 require("maximilianlloyd.treesitter")
 require("maximilianlloyd.lualine")
 require("maximilianlloyd.dashboard-nvim")
 require("maximilianlloyd.gitsigns")
 -- require("maximilianlloyd.which-key")
-require("maximilianlloyd.luasnip")
+require("maximilianlloyd.snippets")
 require("maximilianlloyd.discord")
 require("maximilianlloyd.luatree")
 require("maximilianlloyd.refactoring");
@@ -24,7 +24,7 @@ require("maximilianlloyd.refactoring");
 -- https://github.com/ray-x/lsp_signature.nvim
 -- https://github.com/windwp/nvim-autopairs
 
-vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 
 if pcall(require, 'plenary') then
   RELOAD = require('plenary.reload').reload_module
@@ -37,4 +37,4 @@ end
 
 -- vim.notify = require("notify")
 
-vim.cmd("set laststatus=3")
+
