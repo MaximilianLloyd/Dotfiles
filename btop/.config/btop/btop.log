@@ -27,3 +27,15 @@ btop++ needs an interactive shell to run.
 2022/05/04 (22:50:46) | INFO: Logger set to DEBUG
 2022/05/04 (22:50:46) | DEBUG: Using locale en_US.UTF-8
 2022/05/04 (22:50:46) | INFO: Running on /dev/pts/1
+
+2022/05/09 (23:34:04) | ===> btop++ v.1.2.6
+2022/05/09 (23:34:04) | INFO: Logger set to DEBUG
+2022/05/09 (23:34:04) | DEBUG: Using locale en_US.UTF-8
+2022/05/09 (23:34:04) | INFO: Running on /dev/pts/5
+
+2022/05/09 (23:35:06) | ===> btop++ v.1.2.6
+2022/05/09 (23:35:06) | INFO: Logger set to DEBUG
+2022/05/09 (23:35:06) | DEBUG: Using locale en_US.UTF-8
+2022/05/09 (23:35:06) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
+2022/05/09 (23:35:06) | INFO: Quitting! Runtime: 00:00:00
