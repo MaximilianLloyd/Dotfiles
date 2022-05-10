@@ -6,7 +6,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 local function lsp_highlight_document(client) -- Set autocommands conditional on server_capabilities
-	if client.resolved_capabilities.document_highlight then
+	if client.server_capabilities.document_highlight then
 		vim.api.nvim_exec(
 			[[
       augroup lsp_document_highlight
@@ -23,7 +23,7 @@ end
 local on_attach = function(client, bufnr)
 	-- This is to disable default formatting, so that null-ls works.
 	if client.name == "tsserver" or client.name == "jsonls" then
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.document_formatting = false
 	end
 
 	local function buf_set_keymap(...)
@@ -51,7 +51,6 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 	buf_set_keymap("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 
-	vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
 	lsp_highlight_document(client)
 end
 
