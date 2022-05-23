@@ -17,6 +17,7 @@ require("maximilianlloyd.snippets")
 require("maximilianlloyd.discord")
 require("maximilianlloyd.luatree")
 require("maximilianlloyd.refactoring");
+require("maximilianlloyd.toggleterm");
 
 
 

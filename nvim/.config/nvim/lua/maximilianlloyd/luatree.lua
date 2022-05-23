@@ -44,7 +44,6 @@ nvim_tree.setup({
 	disable_netrw = true,
 	hijack_netrw = true,
 	open_on_setup = false,
-	auto_close = false,
 	auto_reload_on_write = true,
 	open_on_tab = false,
 	hijack_cursor = false,
@@ -103,7 +102,6 @@ nvim_tree.setup({
 		relativenumber = false,
 		signcolumn = "no",
 	},
-	quit_on_open = 0,
 	trash = {
 		cmd = "trash",
 		require_confirm = true,

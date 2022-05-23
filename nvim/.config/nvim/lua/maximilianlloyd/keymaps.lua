@@ -16,7 +16,6 @@ map("n", "<C-Down>", "<cmd>resize +2<CR>", silentOptions)
 map("n", "<C-Left>", "<cmd>vertical resize -2<CR>", silentOptions)
 map("n", "<C-Right>", "<cmd>vertical resize +2<CR>", silentOptions)
 
-
 -- TELESCOPE --
 map("n", "<C-p>", tspbuiltin.git_files, silentOptions)
 map("n", "<leader>b", tspbuiltin.buffers, silentOptions)
@@ -38,7 +37,6 @@ map("n", "<C-s>", "<cmd>update<CR>", silentOptions)
 map("i", "<C-s>", "<ESC> :update<CR>", silentOptions)
 
 map("n", "<leader><CR>", "<cmd>source ~/.config/nvim/init.lua<CR>",{ noremap = true, silent = false })
-
 
 map("i", "<C-a>", "copilot#Accept()", { expr = true, noremap = true, silent = true })
 
@@ -74,12 +72,9 @@ map("n", "gb", "<cmd>BufferPick<CR>", silentOptions)
 
 map("n", "<leader>fr", ":%s/", { noremap = true, silent = false })
 map("n", "<leader>ff", "<cmd>lua vim.lsp.buf.format{ async = true }<CR>", { noremap = true, silent = false })
--- map("n", "<leader>ff", lsp., { noremap = true, silent = false })
 
--- Sets new undo mark so you don't lose a lot of your work
 map("i", ",", ",<c-g>u", { noremap = true, silent = true })
 map("i", ".", ".<c-g>u", { noremap = true, silent = true })
 map("i", "!", "!<c-g>u", { noremap = true, silent = true })
 map("i", "?", "?<c-g>u", { noremap = true, silent = true })
 
--- vim.ui.select is great for making plugins!

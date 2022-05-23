@@ -147,6 +147,7 @@ return packer.startup(function(use)
 	use("rcarriga/nvim-notify")
 	use("jubnzv/virtual-types.nvim")
 	use({ "kevinhwang91/nvim-bqf", ft = "qf", requires = { "junegunn/fzf" } })
+    use("akinsho/toggleterm.nvim")
 	use({
 		"rose-pine/neovim",
 		as = "rose-pine",
