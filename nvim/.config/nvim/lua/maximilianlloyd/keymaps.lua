@@ -18,7 +18,7 @@ map("n", "<C-Right>", "<cmd>vertical resize +2<CR>", silentOptions)
 
 -- TELESCOPE --
 map("n", "<C-p>", tspbuiltin.git_files, silentOptions)
-map("n", "<leader>b", tspbuiltin.buffers, silentOptions)
+-- map("n", "<leader>b", tspbuiltin.buffers, silentOptions)
 map("n", "<leader>fg", tspbuiltin.live_grep, silentOptions)
 map("n", "<leader>fb", file_browser, silentOptions)
 map("n", "<leader>ts", tspbuiltin.treesitter, silentOptions)
@@ -78,3 +78,13 @@ map("i", ".", ".<c-g>u", { noremap = true, silent = true })
 map("i", "!", "!<c-g>u", { noremap = true, silent = true })
 map("i", "?", "?<c-g>u", { noremap = true, silent = true })
 
+-- Dap
+map("n", "<F5>", ":lua require'dap'.continue()<CR>")
+map("n", "<F6>", ":lua require'dap'.step_over()<CR>")
+map("n", "<F7>", ":lua require'dap'.step_into()<CR>")
+map("n", "<F12>", ":lua require'dap'.step_out()<CR>")
+map("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
+map("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+map("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point condition: '))<CR>")
+map("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
+map("n", "<leader>du", ":lua require'dapui'.open()<CR>")

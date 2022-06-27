@@ -50,7 +50,15 @@ return packer.startup(function(use)
 
 	use("folke/lua-dev.nvim")
 	use("andweeb/presence.nvim")
-	use("mfussenegger/nvim-dap")
+	use({
+		"mfussenegger/nvim-dap",
+		requires = {
+			"leoluz/nvim-dap-go",
+			"rcarriga/nvim-dap-ui",
+			"theHamsta/nvim-dap-virtual-text",
+			"nvim-telescope/telescope-dap.nvim",
+		},
+	})
 	use("nvim-telescope/telescope-cheat.nvim")
 
 	use({
@@ -98,7 +106,7 @@ return packer.startup(function(use)
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-cmdline",
 			"hrsh7th/cmp-nvim-lsp",
-			"rafamadriz/friendly-snippets"
+			"rafamadriz/friendly-snippets",
 		},
 	})
 
@@ -147,16 +155,16 @@ return packer.startup(function(use)
 	use("rcarriga/nvim-notify")
 	use("jubnzv/virtual-types.nvim")
 	use({ "kevinhwang91/nvim-bqf", ft = "qf", requires = { "junegunn/fzf" } })
-    use("akinsho/toggleterm.nvim")
+	use("akinsho/toggleterm.nvim")
 	use({
 		"rose-pine/neovim",
 		as = "rose-pine",
 		tag = "v1.*",
 		config = function()
-			vim.cmd [[
+			vim.cmd([[
 			colorscheme rose-pine
 			set laststatus=3
-			]]
+			]])
 		end,
 	})
 
