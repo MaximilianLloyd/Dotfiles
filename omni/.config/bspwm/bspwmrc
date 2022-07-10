@@ -1,10 +1,10 @@
 #! /bin/sh
 
 killall dunst &
-redshift-gtk -x &
 killall polybar &
 killall picom &
 killall picom &
+killall redshift-gtk &
 
 bspc monitor DisplayPort-2 -d I II III IV V VI VII VIII IX X
 
@@ -44,8 +44,6 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Conky state=floating manage=off
 
 # ~/scripts/watcher.sh
-
-feh --bg-fill ~/backgrounds/vroom.jpg &
 
 picom --config ~/.config/picom/picom.conf &
 
