@@ -64,15 +64,17 @@ local servers = {
 	"clangd",
 	"svelte",
 	"vls",
-    "cssls",
+	"cssls",
+	"phpactor",
+	"intelephense",
 }
 
 -- Loop through the servers listed above.
 for _, server_name in pairs(servers) do
 	local server = lspconfig[server_name]
 
-	local capabilities = vim.lsp.protocol.make_client_capabilities()
-	capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+	local initial_capabilities = vim.lsp.protocol.make_client_capabilities()
+	local capabilities = require("cmp_nvim_lsp").update_capabilities(initial_capabilities)
 
 	local opts = {}
 
