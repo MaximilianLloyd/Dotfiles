@@ -32,7 +32,9 @@ local options = {
 	incsearch=true,
 	showmode=true,
     cursorline=false,
-    winbar="%f"
+    winbar="%f",
+    splitbelow=true,
+    splitright=true
 }
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
