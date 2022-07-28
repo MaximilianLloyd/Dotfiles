@@ -1,9 +1,10 @@
-fm6000 -random
+
+# fm6000 -random
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -126,15 +127,15 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/home/max/.cargo/bin
 export BROWSER=firefox
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR=~/.nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+export GOPATH=$HOME/go
 
 # alias v='nvim'
 alias omni='ssh root@70.34.216.13'
-source /usr/share/nvm/init-nvm.sh
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+# source /usr/share/nvm/init-nvm.sh
+# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 #
 # Password IRC: vY836AnrCWeI
 # Hashed: $2a$04$/n9hiQWCp55QgD6xwGBFuO19lboJ89znrDExaUpTwRkKUJ.UBgyga
@@ -145,3 +146,4 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # $2a$04$3vp.r/DlKa.IuUaqfzxyKedbpArT9vYHlyZ05YDxi3reJeVqlZMim
 export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
+source ~/powerlevel10k/powerlevel10k.zsh-theme

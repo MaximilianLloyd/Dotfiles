@@ -1,6 +1,15 @@
 local lspconfig = require("lspconfig")
 
-require("nvim-lsp-installer").setup({})
+require("nvim-lsp-installer").setup({
+    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+    ui = {
+        icons = {
+            server_installed = "✓",
+            server_pending = "➜",
+            server_uninstalled = "✗"
+        }
+    }
+})
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -65,8 +74,7 @@ local servers = {
 	"svelte",
 	"vls",
 	"cssls",
-	"phpactor",
-	"intelephense",
+    "yamlls"
 }
 
 -- Loop through the servers listed above.

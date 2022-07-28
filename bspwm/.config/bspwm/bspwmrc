@@ -30,6 +30,6 @@ bspc rule -a android-studio state=floating border=off follow=on
 bspc rule -a java state=floating border=off follow=on
 
 # ~/scripts/watcher.sh &
-~/scripts/autostart.sh &
+# ~/scripts/autostart.sh &
 
 wmname LG3D
