@@ -125,6 +125,7 @@ eval "$(direnv hook zsh)"
 export GOPATH=~/Development/Go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/home/max/.cargo/bin
+export PATH=$PATH:/opt/rocm-5.1.3/hip/bin
 export BROWSER=firefox
 
 export NVM_DIR=~/.nvm

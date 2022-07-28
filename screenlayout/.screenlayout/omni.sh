@@ -1,2 +1,2 @@
 #!/bin/sh
-xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --primary --mode 3440x1440 --rate 165 --pos 0x0 --rotate normal --output HDMI-A-0 --off
+xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --primary --mode 3440x1440 --rate 100 --pos 0x0 --rotate normal --output HDMI-A-0 --off

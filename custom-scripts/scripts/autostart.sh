@@ -13,23 +13,23 @@ function run {
 #xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 #autorandr horizontal
 
-$HOME/.config/polybar/launch.sh &
 
 xsetroot -cursor_name left_ptr &
 
-run variety &
-run nm-applet &
-run pamac-tray &
-run numlockx on &
-run blueberry-tray &
+# run variety &
+# run nm-applet &
+# run pamac-tray &
+# run numlockx on &
+# run blueberry-tray &
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-# am using dunst /usr/lib/xfce4/notifyd/xfce4-notifyd &
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 run volumeicon &
+run blueberry-tray &
+run variety &
 run discord &
 run spotify &
-run dunst &
 #run atom &
 
-
+~/scripts/polybar.sh &
