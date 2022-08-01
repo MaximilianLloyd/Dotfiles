@@ -161,6 +161,10 @@ return packer.startup(function(use)
 		as = "rose-pine",
 		tag = "v1.*",
 		config = function()
+			require("rose-pine").setup({
+				disable_background = true,
+				disable_float_background = true
+			})
 			vim.cmd([[
 			colorscheme rose-pine
 			set laststatus=3

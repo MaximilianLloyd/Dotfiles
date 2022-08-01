@@ -10,37 +10,40 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
-vim.g.nvim_tree_highlight_opened_files = 1
 
 vim.cmd [[
 highlight NvimTreeFolderName guifg=white gui=bold
 highlight NvimTreeOpenedFolderName guifg=white gui=bold,underline
 ]]
 
-vim.g.nvim_tree_icons = {
-	default = "",
-	symlink = "",
-	git = {
-		unstaged = "",
-		staged = "S",
-		unmerged = "",
-		renamed = "➜",
-		deleted = "",
-		untracked = "U",
-		ignored = "◌",
-	},
-	folder = {
-		arrow_open = "",
-		arrow_closed = "",
-		default = "",
-		open = "",
-		empty = "",
-		empty_open = "",
-		symlink = "",
-	},
-}
-
 nvim_tree.setup({
+	renderer = {
+		icons = {
+			glyphs = {
+				default = "",
+				symlink = "",
+				git = {
+					unstaged = "",
+					staged = "S",
+					unmerged = "",
+					renamed = "➜",
+					deleted = "",
+					untracked = "U",
+					ignored = "◌",
+				},
+				folder = {
+					arrow_open = "",
+					arrow_closed = "",
+					default = "",
+					open = "",
+					empty = "",
+					empty_open = "",
+					symlink = "",
+				},
+			},
+		}
+	}
+	,
 	disable_netrw = true,
 	hijack_netrw = true,
 	open_on_setup = false,
@@ -85,17 +88,15 @@ nvim_tree.setup({
 		timeout = 500,
 	},
 	view = {
-		width = 30,
-		height = 30,
 		hide_root_folder = false,
 		side = "left",
-		auto_resize = true,
+		adaptive_size = true,
 		mappings = {
 			custom_only = false,
 			list = {
 				{ key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
 				-- { key = { "s" }, cb = tree_cb("hsplit") },
-				{ key = "v" , cb = tree_cb("vsplit") },
+				{ key = "v", cb = tree_cb("vsplit") },
 			},
 		},
 		number = false,

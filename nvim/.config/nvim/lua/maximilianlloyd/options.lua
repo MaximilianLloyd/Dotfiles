@@ -34,7 +34,9 @@ local options = {
     cursorline=false,
     winbar="%f",
     splitbelow=true,
-    splitright=true
+    splitright=true,
+	guicursor="",
+	laststatus=3
 }
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
